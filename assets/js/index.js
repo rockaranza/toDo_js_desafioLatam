@@ -6,7 +6,7 @@ const totalTasksElement = document.getElementById('totalTasks');
 const completedTasksElement = document.getElementById('completedTasks');
 const deletedTasksElement = document.getElementById('deletedTasks');
 
-// Variables para el seguimiento de las tareas
+// Arreglos para tareas
 let tasksList = [
   {
     id: 1,
@@ -25,6 +25,8 @@ let tasksList = [
   }
 ]; 
 let deletedTasksList = [];
+
+// Variables para el seguimiento de las tareas
 let totalTasks = 3;
 let completedTasks = 0;
 let deletedTasks = 0;
@@ -76,7 +78,7 @@ const renderTasks = () => {
   deletedTasksElement.textContent = deletedTasks.toString();
 }
 
-// Agregar una tarea al hacer clic en el botón
+// Agregar una tarea al hacer clic en el "agregar"
 addTaskBtn.addEventListener('click', () => {
   const taskName = newTask.value;
   createTask(taskName, false);
@@ -109,5 +111,5 @@ taskContainer.addEventListener('click', event => {
   }
 });
 
-// Renderizar las tareas al cargar la página
+// Renderizar las tareas al cargar pagina
 renderTasks();
