@@ -78,10 +78,10 @@ const renderTasks = () => {
 
 // Agregar una tarea al hacer clic en el botón
 addTaskBtn.addEventListener('click', () => {
-  const taskName = newTask.value; // Obtener el nombre de la tarea del input
-  createTask(taskName, false); // Crear la tarea con el nombre y estado de completado
-  newTask.value = ''; // Limpiar el input después de agregar la tarea
-  renderTasks(); // Renderizar las tareas actualizadas
+  const taskName = newTask.value;
+  createTask(taskName, false);
+  newTask.value = '';
+  renderTasks();
 });
 
 // Acciones en las tareas
@@ -92,19 +92,19 @@ taskContainer.addEventListener('click', event => {
     const taskIndex = tasksList.findIndex(task => task.id === taskId);
     if (taskIndex !== -1) {
       const deletedTask = tasksList.splice(taskIndex, 1)[0];
-      deletedTasksList.push(deletedTask); // Agregar la tarea eliminada a la lista de tareas eliminadas
-      totalTasks--; // Decrementar el contador de tareas totales
-      deletedTasks++; // Incrementar el contador de tareas eliminadas
-      renderTasks(); // Renderizar las tareas actualizadas
+      deletedTasksList.push(deletedTask);
+      totalTasks--;
+      deletedTasks++;
+      renderTasks();
     }
   } else if (event.target.classList.contains('completedTask') && !event.target.classList.contains('disabled')) {
     // Obtener el ID de la tarea desde el atributo de datos del elemento
     const taskId = parseInt(event.target.parentElement.parentElement.dataset.taskId);
     const taskIndex = tasksList.findIndex(task => task.id === taskId);
     if (taskIndex !== -1) {
-      tasksList[taskIndex].completed = true; // Marcar la tarea como completada
-      completedTasks++; // Incrementar el contador de tareas completadas
-      renderTasks(); // Renderizar las tareas actualizadas
+      tasksList[taskIndex].completed = true;
+      completedTasks++; 
+      renderTasks(); 
     }
   }
 });
