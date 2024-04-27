@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="main">
+    <h1>To Do List</h1>
+    <div class="addTask">
+      <input type="text" id="taskName" placeholder="Agrega tu tareas...">
+      <button id="addTask">Agregar</button>
+    </div>
+    <div class="taskTable">
+      <div class="row">
+        <div class="cell">Tareas</div>
+        <div class="cell">Tareas completadas</div>
+        <div class="cell">Tareas eliminadas</div>
+      </div>
+      <div class="row backTotal">
+        <div class="cell" id="totalTasks">0</div>
+        <div class="cell" id="completedTasks">0</div>
+        <div class="cell" id="deletedTasks">0</div>
+      </div>
+    </div>
+    <div class="taskContainer">
+      <!-- <div class="taskCard">
+        <h3 class="taskTitle">Task title</h3>
+        <h5 class="taskState">To do</h5>
+        <div class="taksIcon">
+          <i class="fa-solid fa-check completedTask icon"></i>
+          <i class="fa-solid fa-trash deletedTask icon"></i>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <script src="./assets/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/ae6add6e95.js" crossorigin="anonymous"></script>
+</body>
+</html>

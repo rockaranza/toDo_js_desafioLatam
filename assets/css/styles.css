@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --blue-hard: #054cff;
+  --blue-light: #b9d8ff;
+  --blue-back: #edf5ff;
+  --green-hard: #0abd40;
+  --green-light: #b6fcc9;
+  --red-hard: #f01230;
+  --red-light: #ffc4cc;
+  --yellow-hard: #efe503;
+  --yellow-light: ##f4ff87;
+  --gray-light: #f2f2f6;
+  --gray: #D4D4D8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+.main {
+  width: 40rem;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addTask {
+  width: 40rem;
+  padding-top: 10px;
+  display: flex;
+}
+
+.addTask input {
+  width: 30rem;
+  border: none;
+  background-color: var(--gray-light);
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px
+}
+
+.addTask button {
+  width: 10rem;
+  border: none;
+  background-color: var(--blue-light);
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+.row {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.cell {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+}
+
+.backTotal {
+  background-color: var(--blue-back);
+}
+
+.taskContainer {
+  width: 40rem;
+}
+
+.taskCard {
+  width: 40rem;
+  height: 8rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px var(--gray);
+  border-left: solid 5px var(--blue-hard);
+  border-radius: 5px;
+  background-color: var(--blue-back);
+}
+
+.taskTitle {
+  width: 60%;
+}
+
+.taskState {
+  width: 20%;
+}
+
+.taskIcon {
+  width: 20%;
+}
+.taskCardOk {
+  background-color: var(--green-light);
+  border-left: solid 5px var(--green-hard);
+  
+}
+
+.textThrough {
+  text-decoration: line-through;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.completedTask {
+  color: var(--green-hard);
+}
+.completedTask:hover {
+  background-color: var(--green-light);
+  cursor: pointer;
+  /* color: #fff; */
+}
+.editTask {
+  color: var(--blue-hard);
+}
+.editTask:hover {
+  background-color: var(--blue-light);
+  cursor: pointer;
+  /* color: #fff; */
+}
+.deletedTask {
+  color: var(--red-hard);
+}
+.deletedTask:hover {
+  background-color: var(--red-light);
+  cursor: pointer;
+  /* color: #fff; */
+}
+
+@media screen and (max-width: 400px) {
+  .main,
+  .addTask,
+  .taskContainer {
+    width: 100%;
+  }
+
+  .addTask input {
+    width: calc(100% - 100px);
+  }
+
+  .addTask button {
+    width: 100px;
+  }
+
+  .taskCard {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .taskCard > * {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .taskTitle {
+    width: auto;
+  }
+
+  .taskState,
+  .taskIcon {
+    display: none;
+  }
+
+  .completedTask,
+  .editTask,
+  .deletedTask {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
